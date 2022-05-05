@@ -22,7 +22,15 @@ export default {
 </script>
 
 <style lang="scss">
+:root{
+  --bg-first: #1d2d3c;
+  --bg-two: #2e3a46;
+
+  --text-first: #ffffff;
+  --text-two: #687079;
+}
+
 #app {
-  
+  color: black;
 }
 </style>
