@@ -1,7 +1,9 @@
 <template>
-<nav class="navbar navbar-expand-lg bg-dark">
-    <div class="col-1">
-        <img src="@/assets/img/spot.png" alt="">
+<nav class="navbar navbar-expand-lg bg_card">
+    <div class="col-4">
+        <div class="col-2">
+            <img src="@/assets/img/spot.png" alt="">
+        </div>
     </div>
     <div class="col">
 

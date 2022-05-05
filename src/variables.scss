@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.t_title{
+    color: var(--text-first);
+}
+
+.t_basic{
+    color: var(--text-two);
+}
+
+.bg_card{
+    background-color: var(--bg-two);
+}
+
+.bg_box{
+    background-color: var(--bg-first);
+}
