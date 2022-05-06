@@ -18,6 +18,7 @@
 
 <script>
 import GenreBox from "@/components/GenreBox.vue"
+import state from "@/state.js"
 
 export default{ 
     name: 'SiteHead',
@@ -34,7 +35,9 @@ export default{
     methods:{
         search(){
             console.log('ricerca');
-            console.log(this.genreDisco);            
+            console.log(this.genreDisco);
+            state.genreDisco = this.genreDisco
+            console.log(state);            
         }
     }
 }

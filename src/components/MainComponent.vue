@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-10 mx-auto">
                     <div class="row gap-4 justify-content-center">
-                        <div class="col_1 my-3 rounded bg_card py-3 text-center" v-for="(disco, index) in spot" :key="index">
+                        <div class="col_1 my-3 rounded bg_card py-3 text-center" v-for="(disco, index) in filterGender" :key="index">
                             <img :src="disco.poster" alt="">
                             <h5 class="t_title">{{disco.title}}</h5>
                             <span class="t_basic">{{disco.author}}<br>{{disco.year}}</span>
@@ -18,6 +18,7 @@
 
 <script>
 import axios from "axios";
+import state from '@/state.js'
 
 export default{
     name: "SiteMain",
@@ -29,8 +30,17 @@ export default{
     },
 
     methods:{
-        callApi(){
+    },
 
+    computed:{
+        filterGender(){
+            if(state.genreDisco == ''){
+                return this.spot
+            }else{
+                return this.spot.filter(disco =>{
+                    return disco.genre.toLowerCase().includes(state.genreDisco.toLowerCase())
+                })
+            }
         }
     },
 
